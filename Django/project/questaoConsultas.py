@@ -1,4 +1,5 @@
 from .core.models import *
+from django.db.models import F
 
 #questao 02
 #letra a) Um cliente
@@ -62,9 +63,7 @@ for i in itens_pedido:
 	print(i.id)
 
 # letra e) Produtos que atingiram o estoque minimo
-estoque_min = Produto.objects.filter(quantidade=10)
-for i in estoque_min:
-	print(i.nomeProduto, i.quantidade)
+Produto.objects.filter(quantidade__lte=F('minimo'))
 
 
 
