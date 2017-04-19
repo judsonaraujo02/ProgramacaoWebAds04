@@ -1,4 +1,8 @@
 from .core.models import *
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 #questao 02
 #letra a) Um cliente
@@ -62,8 +66,13 @@ for i in itens_pedido:
 	print(i.id)
 
 # letra e) Produtos que atingiram o estoque minimo
+<<<<<<< Updated upstream
 from django.db.models import F
 Produto.objects.filter(quantidade__lte=F('minimo'))
+=======
+>>>>>>> Stashed changes
 
+from django.db.models import F
+Produto.objects.filter(quantidade__lte=F('minimo'))
 
 
